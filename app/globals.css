@@ -95,11 +95,11 @@ body::after {
   font-weight: 800;
   background: linear-gradient(
     120deg,
-    #a1ecff,
-    #dff9ff,
+    #3026bd,
+    #63dbf7,
     #b1e0ff,
-    #e2ffff,
-    #8de0ff
+    #68ffeb,
+    #d11af5ce
   );
   background-size: 300% 300%;
   color: transparent;
@@ -110,7 +110,7 @@ body::after {
   filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
 }
 
-/* narrow white streak that moves fast */
+narrow white streak that moves fast
 .shiny-text::before {
   content: "";
   position: absolute;

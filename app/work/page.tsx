@@ -13,9 +13,9 @@ export default function WorkPage() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen text-center">
+    <main className="flex flex-col items-center justify-center text-center pt-20">
       <h1 className="text-4xl font-bold mb-6">My Work</h1>
-      <div className="grid gap-8 sm:grid-cols-2 max-w-4xl">
+      <div className="grid gap-8 sm:grid-cols-2 max-w-4xl pt-10">
         {works.map((work, i) => (
           <div
             key={i}

@@ -9,7 +9,7 @@ export default function Hero() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative flex flex-col items-center justify-center min-h-[70vh] text-center overflow-hidden py-20"
+      className="relative flex flex-col items-center justify-center min-h-[30vh] text-center overflow-hidden py-20"
     >
       {/* 🌟 Subtle Glow Background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-blue-900/30 via-purple-900/20 to-black opacity-70" />
@@ -18,7 +18,7 @@ export default function Hero() {
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
+        transition={{ delay: 0.1, duration: 1 }}
         className="relative"
       >
         <div className="absolute inset-0 bg-blue-500/30 blur-3xl rounded-full scale-125" />
