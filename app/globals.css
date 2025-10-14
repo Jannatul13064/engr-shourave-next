@@ -45,12 +45,12 @@ body::before {
   z-index: -1;
   background: radial-gradient(
       600px circle at 15% 20%,
-      rgba(56, 189, 248, 0.15),
+      rgba(58, 165, 210, 0.15),
       transparent 40%
     ),
     radial-gradient(
       800px circle at 80% 60%,
-      rgba(147, 51, 234, 0.15),
+      rgba(153, 61, 240, 0.306),
       transparent 40%
     ),
     radial-gradient(
@@ -96,10 +96,10 @@ body::after {
   background: linear-gradient(
     120deg,
     #3026bd,
-    #63dbf7,
+    #a545d8,
     #b1e0ff,
-    #68ffeb,
-    #d11af5ce
+    #908fe7,
+    #e45fffce
   );
   background-size: 300% 300%;
   color: transparent;
@@ -110,8 +110,7 @@ body::after {
   filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
 }
 
-narrow white streak that moves fast
-.shiny-text::before {
+narrow white streak that moves fast .shiny-text::before {
   content: "";
   position: absolute;
   top: 0;
