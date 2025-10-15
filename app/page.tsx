@@ -15,8 +15,8 @@ export default function Home() {
 
       {/* 🌟 Page Sections */}
       <Hero />
-      <GalleryPage />
       <WorkPage />
+      <GalleryPage />
       <Contact/>
     </main>
   );
