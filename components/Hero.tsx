@@ -3,17 +3,34 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import {
+  FaAward,
+  FaBrain,
+  FaLightbulb,
+  FaCogs,
+  FaRocket,
+} from "react-icons/fa";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [displayedName, setDisplayedName] = useState("");
   const fullName = "Engr. Md Shahriar Shourave";
 
+  // Icon positions for orbiting effect
+  const [iconPositions, setIconPositions] = useState<
+    { x: number; y: number }[]
+  >([]);
+
+  const icons = [FaAward, FaBrain, FaLightbulb, FaCogs, FaRocket];
+  const orbitRadius = 180; // distance from the center
+  const orbitDuration = 12; // seconds for full rotation
+
+  // Set mounted
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // ✨ Typing effect
+  // Typing effect
   useEffect(() => {
     if (!mounted) return;
     let i = 0;
@@ -21,8 +38,21 @@ export default function Hero() {
       setDisplayedName(fullName.slice(0, i + 1));
       i++;
       if (i === fullName.length) clearInterval(interval);
-    }, 100); // typing speed
+    }, 100);
     return () => clearInterval(interval);
+  }, [mounted]);
+
+  // Generate icon positions after mount
+  useEffect(() => {
+    if (!mounted) return;
+    const positions = icons.map((_, index) => {
+      const angle = (index / icons.length) * 2 * Math.PI;
+      return {
+        x: orbitRadius * Math.cos(angle),
+        y: orbitRadius * Math.sin(angle),
+      };
+    });
+    setIconPositions(positions);
   }, [mounted]);
 
   return (
@@ -30,53 +60,49 @@ export default function Hero() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative flex flex-col items-center justify-center min-h-[30vh] text-center overflow-hidden py-20"
+      className="relative flex flex-col items-center justify-center min-h-[70vh] text-center overflow-hidden py-20 px-4"
     >
-      {/* ⚡ Glowing Aura Layers */}
-      <div className="absolute -z-10 inset-0 flex items-center justify-center">
-        <div className="absolute w-[500px] h-[500px] rounded-full" />
+      {/* Glowing Circle */}
+      <motion.div
+        className="absolute w-[320px] h-[320px] rounded-full border-2 border-cyan-400/30 blur-2xl -z-10"
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+      />
 
-        <motion.div
-          className="absolute w-[600px] h-[600px] rounded-full border-2 border-cyan-400/40 blur-md"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="absolute w-[700px] h-[700px] b rounded-full blur-[200px]"
-          animate={{ scale: [1, 1.3, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-
-      {/* 🌟 Floating Light Particles (Client-only) */}
+      {/* Orbiting Neon Yellow Icons */}
       {mounted &&
-        [...Array(8)].map((_, i) => (
+        icons.map((Icon, index) => (
           <motion.div
-            key={i}
-            className="absolute w-2 h-2]"
-            initial={{
-              x: Math.random() * 500 - 250,
-              y: Math.random() * 400 - 200,
-              scale: 0,
-              opacity: 0,
+            key={`icon-${index}`}
+            className="absolute text-indigo-300"
+            style={{
+              fontSize: 50,
+              top: "50%",
+              left: "50%",
+              translateX: -25, // half icon size
+              translateY: -155,
             }}
-            animate={{
-              x: Math.random() * 500 - 250,
-              y: Math.random() * 400 - 200,
-              scale: [0, 1.2, 0],
-              opacity: [0, 1, 0],
-            }}
+            animate={{ rotate: [0, 360] }}
             transition={{
-              duration: Math.random() * 3 + 2,
               repeat: Infinity,
-              delay: i * 0.4,
-              ease: "easeInOut",
+              duration: orbitDuration,
+              ease: "linear",
+              delay: (index / icons.length) * 2,
             }}
-          />
+          >
+            <motion.div
+              style={{
+                position: "absolute",
+                x: iconPositions[index]?.x || 0,
+                y: iconPositions[index]?.y || 0,
+              }}
+            >
+              <Icon />
+            </motion.div>
+          </motion.div>
         ))}
 
-      {/* 🧍 Profile Image with Glow */}
+      {/* Profile Image with Glow */}
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -84,11 +110,10 @@ export default function Hero() {
         className="relative"
       >
         <motion.div
-          className="absolute inset-0 bg-blue-500/30 blur-2xl rounded-full"
-          animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.1, 1] }}
+          className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"
+          animate={{ opacity: [0.3, 0.8, 0.3], scale: [1, 1.1, 1] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
-
         <Image
           src="/images/personal/profile.png"
           alt="Md Shahriar Shourave"
@@ -99,7 +124,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* 🏆 Typing Name */}
+      {/* Typing Name */}
       <motion.h1
         className="mt-8 text-4xl sm:text-6xl font-extrabold py-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500"
         initial={{ opacity: 0 }}
@@ -114,7 +139,7 @@ export default function Hero() {
         />
       </motion.h1>
 
-      {/* 💬 Description */}
+      {/* Description */}
       <motion.p
         className="text-gray-300 text-lg sm:text-xl mt-4 max-w-3xl leading-relaxed px-6"
         initial={{ opacity: 0 }}
@@ -131,7 +156,7 @@ export default function Hero() {
         .
       </motion.p>
 
-      {/* 🌐 Buttons */}
+      {/* Buttons */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -140,7 +165,7 @@ export default function Hero() {
       >
         <a
           href="/about"
-          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-emerald-500 text-white rounded-xl font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-emerald-500 text-white rounded-xl font-semibold shadow-lg hover:scale-105 transition-transform duration-300 animate-bounce ..."
         >
           Discover His Vision
         </a>

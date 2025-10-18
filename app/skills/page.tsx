@@ -79,7 +79,7 @@ export default function SkillsPage() {
             viewport={{ once: true }}
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.5 }}
-            className="flex-1 rounded-2xl shadow-lg p-4 bg-white dark:bg-gray-800"
+            className="flex-1 rounded-2xl shadow-lg p-4"
           >
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200 text-center">
               Skill Distribution (Pie Chart)
@@ -119,10 +119,10 @@ export default function SkillsPage() {
             viewport={{ once: true }}
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex-1 rounded-2xl shadow-lg p-4 bg-white dark:bg-gray-800"
+            className="flex-1 rounded-2xl shadow-lg p-4  "
           >
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200 text-center">
-              Personal Attributes (Radar Chart)
+              Personal Attributes
             </h2>
             <div className="w-full h-[300px] md:h-[400px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -151,10 +151,10 @@ export default function SkillsPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
           whileHover={{ scale: 1.02 }}
-          className="w-full rounded-2xl shadow-lg p-6 bg-white dark:bg-gray-800"
+          className="w-full rounded-2xl shadow-lg p-6 "
         >
           <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200 text-center">
-            Key Skills (Bar Chart)
+            Key Skills
           </h2>
           <div className="w-full h-[300px] md:h-[400px]">
             <ResponsiveContainer width="100%" height="100%">

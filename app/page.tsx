@@ -5,6 +5,7 @@ import GalleryPage from "./gallery/page";
 import WorkPage from "./work/page";
 import Contact from "./contact/page";
 import SkillsPage from "./skills/page";
+import Quote from "./quote/page";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <WorkPage />
       <SkillsPage />
+      <Quote />
       <GalleryPage />
       <Contact />
     </main>
