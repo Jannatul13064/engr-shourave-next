@@ -32,12 +32,9 @@ export default function Hero() {
       transition={{ duration: 0.8 }}
       className="relative flex flex-col items-center justify-center min-h-[30vh] text-center overflow-hidden py-20"
     >
-      {/* 🌌 Background */}
-      <div className="absolute inset-0 -z-20 bg-gradient-to-b from-blue-900/40 via-purple-900/30 to-black opacity-90" />
-
       {/* ⚡ Glowing Aura Layers */}
       <div className="absolute -z-10 inset-0 flex items-center justify-center">
-        <div className="absolute w-[500px] h-[500px] bg-blue-400/30 blur-[150px] rounded-full" />
+        <div className="absolute w-[500px] h-[500px] rounded-full" />
 
         <motion.div
           className="absolute w-[600px] h-[600px] rounded-full border-2 border-cyan-400/40 blur-md"
@@ -46,7 +43,7 @@ export default function Hero() {
         />
 
         <motion.div
-          className="absolute w-[700px] h-[700px] bg-gradient-to-r from-blue-600/20 via-cyan-400/10 to-transparent rounded-full blur-[200px]"
+          className="absolute w-[700px] h-[700px] b rounded-full blur-[200px]"
           animate={{ scale: [1, 1.3, 1] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -57,7 +54,7 @@ export default function Hero() {
         [...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-cyan-300 rounded-full blur-[3px] shadow-[0_0_25px_rgba(34,211,238,0.9)]"
+            className="absolute w-2 h-2]"
             initial={{
               x: Math.random() * 500 - 250,
               y: Math.random() * 400 - 200,

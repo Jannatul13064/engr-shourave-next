@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center py-20 px-6 bg-gradient-to-b from-black via-gray-900 to-black text-white">
+    <main className="min-h-screen flex flex-col items-center justify-center py-20 px-6 text-white">
       <div className="max-w-7xl w-full mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* 🏢 Left Section - Contact Info */}
         <div className="flex flex-col justify-start">
@@ -13,25 +13,26 @@ export default function Contact() {
           </h1>
 
           <p className="text-gray-300 mb-8 leading-relaxed">
-            Whether you have a project in mind, a question about my work, or just
-            want to say hello — I’d love to hear from you. Fill out the form or
-            use the contact details below to reach out directly. I value genuine
-            connections and collaborative discussions that lead to innovation and
-            meaningful results.
+            Whether you have a project in mind, a question about my work, or
+            just want to say hello — I’d love to hear from you. Fill out the
+            form or use the contact details below to reach out directly. I value
+            genuine connections and collaborative discussions that lead to
+            innovation and meaningful results.
           </p>
 
           <p className="text-gray-400 mb-8 leading-relaxed">
             My focus lies in building sustainable technological ecosystems,
-            advancing renewable energy solutions, and crafting automation systems
-            that empower industries for a smarter future. If you’re a business
-            partner, investor, engineer, or creative mind looking to collaborate,
-            let’s connect and explore how we can shape progress together.
+            advancing renewable energy solutions, and crafting automation
+            systems that empower industries for a smarter future. If you’re a
+            business partner, investor, engineer, or creative mind looking to
+            collaborate, let’s connect and explore how we can shape progress
+            together.
           </p>
 
           <p className="text-gray-400 mb-10 leading-relaxed">
-            I personally review all professional inquiries and ensure each message
-            receives the attention it deserves. Don’t hesitate to get in touch —
-            your ideas and questions are always welcome.
+            I personally review all professional inquiries and ensure each
+            message receives the attention it deserves. Don’t hesitate to get in
+            touch — your ideas and questions are always welcome.
           </p>
 
           <div className="space-y-6">
@@ -90,7 +91,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm text-gray-300 mb-2">Message</label>
+              <label className="block text-sm text-gray-300 mb-2">
+                Message
+              </label>
               <textarea
                 rows={5}
                 placeholder="Write your message..."
