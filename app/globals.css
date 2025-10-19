@@ -2,7 +2,7 @@
 
 /* 🌈 Dynamic Color Variables */
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
   --accent: #2563eb; /* Tailwind blue-600 */
 }
