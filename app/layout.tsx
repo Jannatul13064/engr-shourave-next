@@ -29,6 +29,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" />
+        <title>Md Shahriar Shourave </title>
+      </head>
       <body className="relative text-white pt-0">
         <Header />
         {children}
