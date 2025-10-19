@@ -66,7 +66,7 @@ export default function SkillsPage() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 pb-4"
         >
-          Managing Director Skills Dashboard
+          Skills Dashboard
         </motion.h1>
 
         {/* Pie & Radar Charts */}

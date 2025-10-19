@@ -17,19 +17,19 @@ const works: WorkItem[] = [
     title: "Advanced ABC Group",
     role: "Group Managing Director",
     desc: "Leading a diversified conglomerate driving innovation in healthcare, automation, and renewable energy.",
-    img: "/images/work/abc-group.jpg",
+    img: "/images/work/abc-group.png",
   },
   {
-    title: "BEAB",
+    title: "Biomedical Engineers Association of Bangladesh (BEAB)",
     role: "Founder & President",
     desc: "Empowering biomedical professionals and advancing healthcare technology nationwide.",
-    img: "/images/work/beab.jpg",
+    img: "/images/work/beab.png",
   },
   {
     title: "IVD & Lab Automation",
     role: "Technical Expert & Project Lead",
     desc: "Directed installation and integration of Siemens, Bio-Rad, and Maglumi analyzers.",
-    img: "/images/work/ivd-project.jpg",
+    img: "/images/work/ivd-project.png",
   },
   {
     title: "Sister Concerns Oversight",

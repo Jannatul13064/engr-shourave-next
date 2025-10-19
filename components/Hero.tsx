@@ -14,7 +14,7 @@ import {
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [displayedName, setDisplayedName] = useState("");
-  const fullName = "Engr. Md Shahriar Shourave";
+  const fullName = "Engr. MD SHAHRIAR SHOURAVE";
 
   // Icon positions for orbiting effect
   const [iconPositions, setIconPositions] = useState<
