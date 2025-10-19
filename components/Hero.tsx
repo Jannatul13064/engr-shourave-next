@@ -146,7 +146,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.9 }}
       >
-        Founder & CEO of{" "}
+        Managing Director of{" "}
         <span className="text-blue-400 font-semibold">Advanced ABC Groups</span>{" "}
         — leading innovation in renewable energy, industrial automation, and
         smart technology. Winner of the{" "}

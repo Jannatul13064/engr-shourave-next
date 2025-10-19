@@ -52,7 +52,7 @@ export default function Quote() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4 py-16 to-black text-white">
-      <h1 className="text-4xl sm:text-5xl font-extrabold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
+      <h1 className="text-4xl sm:text-5xl font-extrabold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 pb-3">
         Inspirational Quotes
       </h1>
 

@@ -49,7 +49,7 @@ const works: WorkItem[] = [
 function Card({ title, role, desc, img }: WorkItem) {
   return (
     <motion.div
-      className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden w-72 md:w-80 lg:w-96 flex-shrink-0 cursor-pointer"
+      className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-lg overflow-hidden w-72 md:w-80 lg:w-96 flex-shrink-0 cursor-pointer"
       initial={{ scale: 1, rotateX: 0, rotateY: 0 }}
       whileHover={{ scale: 1.05, rotateX: 2, rotateY: 2 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -119,7 +119,7 @@ export default function WorkPage() {
   return (
     <section className="relative flex flex-col items-center py-16 px-4 md:px-8 overflow-hidden">
       <h2 className="text-3xl md:text-5xl font-extrabold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-center pb-3">
-        Leadership & Achievements
+        Leadership
       </h2>
 
       {/* Mobile Carousel */}
