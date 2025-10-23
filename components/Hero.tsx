@@ -10,6 +10,7 @@ import {
   FaCogs,
   FaRocket,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -148,8 +149,11 @@ export default function Hero() {
       >
         Managing Director of{" "}
         <span className="text-blue-400 font-semibold">Advanced ABC Groups</span>{" "}
-        — leading innovation in renewable energy, industrial automation, and
-        smart technology. Winner of the{" "}
+        A visionary entrepreneur and corporate leader with over a decade of
+        excellence in healthcare, manufacturing, and global trade — driving
+        sustainable innovation, shaping modern infrastructure, and inspiring
+        transformation through strategic growth and social responsibility..
+        Winner of the{" "}
         <span className="text-emerald-400 font-semibold">
           Wondu China Excellence Award
         </span>
@@ -163,18 +167,18 @@ export default function Hero() {
         transition={{ delay: 1.3 }}
         className="flex flex-wrap justify-center gap-4 mt-8"
       >
-        <a
+        <Link
           href="/about"
           className="px-8 py-3 bg-gradient-to-r from-blue-600 to-emerald-500 text-white rounded-xl font-semibold shadow-lg hover:scale-105 transition-transform duration-300 animate-bounce ..."
         >
           Discover His Vision
-        </a>
-        <a
-          href="/companies"
+        </Link>
+        <Link
+          href="/cv"
           className="px-8 py-3 border border-blue-500 text-blue-400 rounded-xl hover:bg-blue-500 hover:text-black font-semibold transition"
         >
-          Explore Advanced ABC Groups
-        </a>
+          Explore CV
+        </Link>
       </motion.div>
     </motion.section>
   );

@@ -18,6 +18,7 @@ export default function Header() {
     { href: "/quote", label: "Quote" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact" },
+    { href: "/cv", label: "CV" },
   ];
 
   return (

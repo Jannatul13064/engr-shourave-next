@@ -6,11 +6,11 @@ import Image from "next/image";
 export default function GalleryPage() {
   const images = [
     "/images/personal/work1.jpg",
-    "/images/personal/work2.jpg",
+    "/images/personal/work2.jpeg",
     "/images/personal/work3.jpg",
-    "/images/personal/work4.jpg",
-    "/images/personal/work5.jpg",
-    "/images/personal/work6.jpg",
+    "/images/personal/work4.jpeg",
+    "/images/personal/work5.jpeg",
+    "/images/personal/work6.jpeg",
     "/images/personal/work7.jpeg",
     "/images/personal/work8.jpeg",
   ];
